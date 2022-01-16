@@ -17,7 +17,7 @@ I will give the update log in English.
   - The prompt is changed to English;
   - Change the code writing;
 - v1.3
-  - change the code storage mode;
+  - Change the code storage mode;
   - You can output the string;
 - v1.3.2
   - Highlight the error prompt;

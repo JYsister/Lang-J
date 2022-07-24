@@ -1,61 +1,44 @@
 # Lang-J
-This is the programming language I created independently.
 
-At present, it is not perfect. For some reason, the update log in the .cpp file is in Chinese.
+为本人闲着无聊搞出来的成品。
 
-I will give the update log in English.
+## 食用指北
+### 输出：`out`
 
-## Update log
+用 `out "xxx"` 或 `out xxx` 的形式（字符串中可添加转义字符）。
 
-- v1.0
-  - Complete;
-- v1.1
-  - Fix some bugs;
-  - Add error prompt;
-  - Change from false compilation to interpretation;
-- v1.2
-  - The prompt is changed to English;
-  - Change the code writing;
-- v1.3
-  - Change the code storage mode;
-  - You can output the string;
-- v1.3.2
-  - Highlight the error prompt;
-  - Add some escape characters;
-- v1.3.7
-  - Add notes;
-  - Fix the bug that cannot be output after escaping characters;
-  - Add some escape characters;
-- v1.3.7.1
-  - Cancel reset page;
-  
-***You can get any version of Lang-J.***
+### 定义变量：`var`
 
-## Use guide
-### Output
+用 `var x,y,z` 的形式定义变量（变量名要求）
 
-You can use `<"xxx"` to output a string `xxx`.
+### 输入：`in`
 
-You also can use `<xxx` to output a variable named `xxx`, but you should enter it to declare this variable.
+你可以用 `in xxx,yyy,zzz` 的形式（等价于 C++ 的 `cin>>xxx>>yyy>>zzz;`，其中 xxx,yyy,zzz 均为字符串）。
 
-### Input
+### 注释：`note`
 
-You can use `>xxx` to enter a variable named `xxx`. The data type of the variable depends on the input content.
+你可以用形如 `note xxx` 的形式来进行注释。
 
-**Note: when inputting a string, its effect is the same as that of C++ `cin>>string;` equally.**
+### 结束：`DONE.`
 
-### Note
+在程序结束时必须写上这句话。
 
-You can use `$xxx` as a comment.
+### 循环：`repeat...done`
 
-### `DONE.`
+你可以用形如
+```
+repeat t
+in x
+out x
+out "\n"
+done
+```
+的形式进行循环（可嵌套，t 处目前仅能使用数字）
 
-You must write this code after writing the program to end the program.
-
-## Problems
+## 题库
 
 [Link.](https://www.luogu.com.cn/training/136096)
 
-## Files
+## 编辑&解释程序
 
-These files are used to write your code in Lang-J.
+项目中的是各项版本的编辑&解释程序。

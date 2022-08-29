@@ -7,9 +7,15 @@
 
 用 `out "xxx"` 或 `out xxx` 的形式（字符串中可添加转义字符）。
 
-### 定义变量：`var`
+### 新建变量：`newvar`
 
-用 `var x,y,z` 的形式定义变量（变量名要求同 C++）。
+用 `newvar x,y,z` 的形式新建变量（变量名要求同 C++）。
+
+### 删除变量：`delvar`
+
+用 `delvar x,y,z` 的形式删除变量（变量名要求同 C++）。
+
+**注意：对于循环内的变量，在循环末尾必须删掉。**
 
 ### 输入：`in`
 
@@ -28,16 +34,18 @@
 你可以用形如
 ```
 repeat t
+newvar x
 in x
 out x
 out "\n"
+delvar x
 done
 ```
 的形式进行循环（可嵌套，t 处目前仅能使用数字）
 
 ## 题库
 
-[Link.](https://www.luogu.com.cn/training/136096)
+~~[Link.](https://www.luogu.com.cn/training/136096)~~ 已废弃。
 
 ## 编辑&解释程序
 

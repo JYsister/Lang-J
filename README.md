@@ -19,7 +19,7 @@
 
 ### 输入：`in`
 
-你可以用 `in xxx,yyy,zzz` 的形式（等价于 C++ 的 `cin>>xxx>>yyy>>zzz;`，其中 xxx,yyy,zzz 均为字符串）。
+你可以用 `in xxx,yyy,zzz` 的形式（等价于 C++ 的 `cin>>xxx>>yyy>>zzz;`，其中 xxx,yyy,zzz 均为变量）。
 
 ### 注释：`note`
 

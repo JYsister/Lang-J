@@ -32,7 +32,7 @@
 ### 循环：`repeat...done`
 
 你可以用形如
-```
+```plain
 repeat t
 newvar x
 in x
@@ -50,3 +50,113 @@ done
 ## 编辑&解释程序
 
 项目中的是各项版本的编辑&解释程序。
+
+## 错误&正确程序示例
+
+```plain
+out '1'
+```
+错误：无 `out 'x'` 的形式。
+正确形式：
+```plain
+out "1"
+```
+
+---
+
+```plain
+out "12","32","123"
+```
+错误：无 `out "x","y","z"` 的形式。
+正确形式：
+```plain
+out "12"
+out "32"
+out "123"
+```
+
+---
+
+```plain
+newvar 114514,\Karry5307/,$water235$,note,in
+```
+错误：不合法变量。
+正确形式：
+```plain
+newvar _114514,_Karry5307_,_water235_,note_,IN
+```
+
+---
+
+```plain
+delvar xyz
+```
+错误：删除不存在的变量。
+正确形式：
+```plain
+newvar xyz
+delvar xyz
+```
+
+---
+
+```plain
+newvar x
+in x
+repeat x
+out x
+out "\n"
+done
+```
+错误：循环次数为变量。
+正确形式：
+```plain
+newvar x
+in x
+repeat 114514
+out x
+out "\n"
+done
+```
+
+---
+
+```plain
+newvar x
+in x
+repeat 5
+out x
+out "\n"
+```
+错误：`repeat` 语句没有对应的 `done`。
+正确形式：
+```plain
+newvar x
+in x
+repeat 5
+out x
+out "\n"
+done
+```
+
+---
+
+```plain
+repeat 5
+newvar x
+in x
+out x
+out "\n"
+done
+```
+错误：循环内定义的变量没有删除。
+正确形式：
+```plain
+repeat 5
+newvar x
+in x
+out x
+out "\n"
+delvar x
+done
+```
